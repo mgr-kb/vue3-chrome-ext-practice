@@ -1,0 +1,30 @@
+{
+  "name": "vue3-chrome-ext-practice",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build:vite": "vue-tsc --noEmit && vite build",
+    "build": "run-s clear build:manifest build:popup",
+    "build:manifest": "esno src/manifest.ts",
+    "build:popup": "vite build",
+    "clear": "rimraf extension/dist extension/manifest.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.179",
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^17.0.21",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "esno": "^0.14.1",
+    "fs-extra": "^10.0.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vue-tsc": "^0.29.8"
+  }
+}
